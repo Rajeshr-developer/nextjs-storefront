@@ -1,0 +1,90 @@
+@use 'variables' as *;
+
+// ── Flex helpers ─────────────────────────────────────
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin flex-gap($gap: 8px) {
+  display: flex;
+  align-items: center;
+  gap: $gap;
+}
+
+// ── Badge ────────────────────────────────────────────
+@mixin badge($color, $bg) {
+  display: inline-block;
+  padding: 3px 9px;
+  border-radius: $radius-full;
+  font-size: $font-xs;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  color: $color;
+  background: $bg;
+}
+
+// ── Button ───────────────────────────────────────────
+@mixin btn-base {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  border-radius: $radius-md;
+  font-size: $font-sm;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  transition: all 0.15s;
+}
+
+// ── Card ─────────────────────────────────────────────
+@mixin card {
+  background: $surface;
+  border: 1px solid $border;
+  border-radius: $radius-lg;
+  padding: 20px;
+}
+
+// ── Skeleton animation ───────────────────────────────
+@mixin skeleton {
+  background: $surface2;
+  border-radius: $radius-sm;
+  animation: pulse 1.5s infinite;
+}
+
+// ── Cache banner ─────────────────────────────────────
+@mixin cache-banner($color) {
+  padding: 8px 14px;
+  margin-bottom: 24px;
+  background: rgba($color, 0.1);
+  border: 1px solid rgba($color, 0.2);
+  border-radius: $radius-md;
+  font-size: $font-sm;
+  color: $color;
+  @include flex-between;
+}
+
+// ── Truncate text ────────────────────────────────────
+@mixin truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+// ── Label style (table headers, form labels) ─────────
+@mixin label {
+  color: $muted;
+  font-size: $font-xs;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}

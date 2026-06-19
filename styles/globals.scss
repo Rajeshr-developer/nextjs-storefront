@@ -1,0 +1,20 @@
+// ── Import all partials ───────────────────────────────
+@use 'variables' as *;
+@use 'mixins' as *;
+@use 'base';
+@use 'layout';
+@use 'components';
+
+// ── CSS Variables — exposed to JavaScript & inline styles
+:root {
+  --bg:       #{$bg};
+  --surface:  #{$surface};
+  --surface2: #{$surface2};
+  --border:   #{$border};
+  --accent:   #{$accent};
+  --accent2:  #{$accent2};
+  --danger:   #{$danger};
+  --warning:  #{$warning};
+  --text:     #{$text};
+  --muted:    #{$muted};
+}

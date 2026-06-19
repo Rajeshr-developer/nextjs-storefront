@@ -1,0 +1,38 @@
+// ── Color tokens ─────────────────────────────────────
+$bg:       #0f1117;
+$surface:  #1a1d27;
+$surface2: #22263a;
+$border:   #2e3350;
+$accent:   #6c63ff;
+$accent2:  #00d4aa;
+$danger:   #ff4f4f;
+$warning:  #f5a623;
+$text:     #e8eaf0;
+$muted:    #7b82a0;
+
+// ── Typography ───────────────────────────────────────
+$font-base:    14px;
+$font-sm:      12px;
+$font-xs:      11px;
+$font-lg:      18px;
+$font-xl:      22px;
+
+// ── Spacing ──────────────────────────────────────────
+$radius-sm:  4px;
+$radius-md:  7px;
+$radius-lg:  10px;
+$radius-xl:  12px;
+$radius-full: 20px;
+
+// ── Layout ───────────────────────────────────────────
+$sidebar-width: 220px;
+$main-padding:  32px;
+
+// ── Badge map — loop generates all badge variants ────
+$badges: (
+  'green':  ($accent2,  rgba($accent2, 0.15)),
+  'yellow': ($warning,  rgba($warning, 0.15)),
+  'red':    ($danger,   rgba($danger,  0.15)),
+  'blue':   ($accent,   rgba($accent,  0.15)),
+  'gray':   ($muted,    rgba($muted,   0.15)),
+);

@@ -1,0 +1,38 @@
+@use 'variables' as *;
+
+// ── Reset ────────────────────────────────────────────
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+// ── Body ─────────────────────────────────────────────
+body {
+  background: $bg;
+  color: $text;
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: $font-base;
+  line-height: 1.5;
+}
+
+// ── Animations ───────────────────────────────────────
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.4; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+// ── Scrollbar ────────────────────────────────────────
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: $surface; }
+::-webkit-scrollbar-thumb {
+  background: $border;
+  border-radius: 3px;
+
+  &:hover { background: $muted; }
+}
